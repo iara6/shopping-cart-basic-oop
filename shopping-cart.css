@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* font-family: "Albert Sans", sans-serif;  
+font-family: "Barlow", sans-serif; */
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --clr-1: #6A5B6E;
+  --clr-2: #F8F991;
+  --clr-3: #F0B7B3;
+  --clr-4: #8AA29E;
+  --clr-5: #5AB1BB;
+  --clr-6: #e1efe6;
+  --clr-7: #FF5A5F;
+  --clr-8: #1b1b1c;
+}
+
+body {
+  font-family: "Barlow", sans-serif;
+  background: var(--clr-5);
+  background: linear-gradient(0deg, var(--clr-7) 0%, var(--clr-5) 100%);
+}
+
+.title {
+  color: var(--clr-6);
+  text-align: center;
+  padding: 1.6rem 0;
+  font-size: 2.5rem;
+  font-family: "Albert Sans", sans-serif;
+  text-shadow: 0 0 6px var(--clr-1);
+}
+
+h2 {
+  font-family: "Albert Sans", sans-serif;
+  color: var(--clr-8);
+}
+
+
+#dessert-card-container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.dessert-card {
+  background-color: var(--clr-6);
+  padding: 15px;
+  text-align: center;
+  border-radius: 15px;
+  margin: 20px 10px;
+}
+.dessert-image-div {
+  width: 230px;
+  height: 140px;
+  margin-inline: auto;
+  margin-bottom: 0.7rem;
+}
+.dessert-image-div img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 4px;
+  border: 2px solid var(--clr-5);
+}
+.dessert-price {
+  font-size: 1.2rem;
+  font-weight: 550;
+  margin-top: 10px;
+}
+
+.btn {
+  display: block;
+  cursor: pointer;
+  width: 100px;
+  color: var(--clr-8);
+  background-image: linear-gradient(var(--clr-2), var(--clr-7));
+  border: 1px solid var(--clr-7);
+  padding: 0.4rem;
+}
+
+.btn:hover {
+  background-image: none;
+  background-color: var(--clr-7);
+  color: var(--clr-6);
+  border: 1px solid var(--clr-2);
+}
+
+.cart-button-icon-container {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  top: 0;
+  right: 0;
+}
+/* .shopping-cart-icon-div {
+  margin-top: 1.2rem;
+  position: relative;
+} */
+.shopping-cart-icon-div {
+  margin-top: 1rem;
+  position: relative;
+}
+.shopping-cart-icon-div i {
+  font-size: 2.5rem;
+  color: var(--clr-2);
+}
+.icon-items-number {
+  position: absolute;
+  right: 1rem;
+  top: 2px;
+  font-size: 1.03rem;
+  cursor: default;
+}
+
+.add-to-cart-btn {
+  margin: 30px auto 10px;
+}
+
+#cart-container {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--clr-2);
+  width: 300px;
+  height: 430px;
+  border: 5px solid var(--clr-5);
+  outline: 2px solid var(--clr-7);
+  border-radius: 4px;
+  text-align: center;
+  font-size: 1.2rem;
+  overflow-y: scroll;
+  transition: 250ms;
+}
+#cart-container:hover {
+  outline-offset: -6px;
+}
+.cart-container-buttons-div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.close-btn-div i {
+  font-size: 1.4rem;
+  color: var(--clr-7);
+  cursor: pointer;
+}
+
+.total-number-of-items {
+  margin-top: 1rem;
+}
+.taxes {
+  margin-bottom: 0.3rem;
+}
+
+hr {
+  border-top: 1px dashed var(--clr-7);
+}
+
+.total {
+  font-weight: 550;
+  margin-bottom: 1rem;
+  margin-top: 0.5rem;
+}
+
+.product {
+  margin: 1rem 0;
+  font-weight: 550;
+  font-family: "Albert Sans", sans-serif;  
+
+}
+
+.product-count {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.product-category {
+  margin: 10px 0;
+}
+
+@media (min-width: 768px) {
+  #dessert-card-container {
+    flex-direction: row;
+  }
+
+  .dessert-card {
+    flex: 1 0 21%;
+  }
+
+  #cart-container {
+    width: 350px;
+  }
+  .cart-button-icon-container {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    top: 2.5rem;
+    right: 2.5rem;
+  }
+  .shopping-cart-icon-div {
+    margin-top: 0;
+    margin-left: 1.2rem;
+    position: relative;
+  }
+}

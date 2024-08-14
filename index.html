@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shopping Cart Page</title>
+    <link rel="stylesheet" 
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="shopping-cart.css"/>
+  </head>
+  <body>
+    <header>
+      <h1 class="title">Desserts</h1>
+    </header>
+    <main>
+      <div class="cart-button-icon-container">
+        <button id="cart-btn" type="button" class="btn">
+        <span id="show-hide-cart">Show</span> Cart
+        </button>
+        <div class="shopping-cart-icon-div">
+          <i class="fa-solid fa-cart-shopping"></i>
+          <span class="icon-items-number">0</span>
+        </div>
+      </div>
+      <div id="cart-container">
+        <div class="cart-container-buttons-div">
+          <button class="btn" id="clear-cart-btn">
+            Clear Cart
+          </button>
+          <div class="close-btn-div">
+            <i class="fa-regular fa-circle-xmark"></i>
+          </div>
+        </div>
+        
+        <div id="products-container"></div>
+        <p class="total-number-of-items">Total number of items: <span id="total-items">0</span></p>
+        <p>Subtotal: <span id="subtotal">$0</span></p>
+        <p class="taxes">Taxes: <span id="taxes">$0</span></p>
+        <hr>
+        <p class="total">Total: <span id="total">$0</span></p>
+      </div>
+      <div id="dessert-card-container">
+
+       <!--  <div class="dessert-card">
+          <div class="dessert-image-div">
+            <img src="./pics/pic-1.jpg">
+          </div>
+          <h2>Chocolate Ice Cream</h2>
+          <p class="dessert-price">$${price}</p>
+          <p class="product-category">Category: ${category}</p>
+          <button 
+            id="${id}" 
+            class="btn add-to-cart-btn">Add to cart
+          </button>
+        </div>
+ -->
+
+      </div>
+    </main>
+    <script src="shopping-cart.js"></script>
+  </body>
+</html>
